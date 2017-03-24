@@ -93,6 +93,13 @@ console.log(youngerThanFifty)
 
 // Use reduce() to find the oldest person.
 
-var oldestPerson = people.reduce(function(previous,current) {
-  return 
-})
+function findOldest (prevVal, currentVal) {
+  if (prevVal.age > currentVal.age) {
+    return prevVal
+  }
+  return currentVal
+}
+
+var oldestPerson = people.reduce(findOldest, 0)
+
+console.log('oldest!!!!', oldestPerson)
