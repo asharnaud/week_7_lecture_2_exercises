@@ -102,4 +102,4 @@ function findOldest (prevVal, currentVal) {
 
 var oldestPerson = people.reduce(findOldest, 0)
 
-console.log('oldest!!!!', oldestPerson)
+console.log(oldestPerson)
